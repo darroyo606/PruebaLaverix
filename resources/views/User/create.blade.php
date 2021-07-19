@@ -79,6 +79,16 @@
             <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required autocomplete="new-password">
         </div>
     </div>
+    <div class="form-group">
+        <label for="roles_id">Roles </label>
+        <select name="roles_id" id="roles_id" class="form-control border-0 big-light shadow-sm" autofocus>
+        <option value="">Seleccionar</option>
+        @foreach($roles as $id=>$nombre)
+        <option value="{{$id}}" >{{$nombre}}
+        </option>
+        @endforeach
+        </select>
+    </div>
 
     <div class="form-group row mb-0">
         <div class="col-md-6 offset-md-4">
